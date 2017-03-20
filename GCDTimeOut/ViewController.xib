@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewController">
+            <connections>
+                <outlet property="timeLabel" destination="Hxk-dh-vdu" id="25b-fG-5NE"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:60:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hxk-dh-vdu">
+                    <rect key="frame" x="69" y="140" width="238" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="238" id="IJ8-Tk-ODO"/>
+                        <constraint firstAttribute="height" constant="21" id="TJ9-dt-7pb"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hpG-Rr-Gzp">
+                    <rect key="frame" x="141" y="181" width="94" height="30"/>
+                    <color key="backgroundColor" red="0.42008234420000001" green="0.74873219010000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="ogy-0L-thB"/>
+                        <constraint firstAttribute="width" constant="94" id="xJT-Uf-g9I"/>
+                    </constraints>
+                    <state key="normal" title="开始倒计时">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="startTimeOut:" destination="-1" eventType="touchUpInside" id="Kmk-Mn-gpz"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QtY-pq-BUh">
+                    <rect key="frame" x="131" y="238" width="113" height="29"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="29" id="5IH-5t-g8a"/>
+                        <constraint firstAttribute="width" constant="113" id="5dC-fP-ypE"/>
+                    </constraints>
+                    <state key="normal" title="前往倒计时列表"/>
+                    <connections>
+                        <action selector="toTableViewTimeOut:" destination="-1" eventType="touchUpInside" id="gyX-04-dhb"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="hpG-Rr-Gzp" firstAttribute="top" secondItem="Hxk-dh-vdu" secondAttribute="bottom" constant="20" id="ESl-HV-XlG"/>
+                <constraint firstItem="hpG-Rr-Gzp" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="ODb-ux-2rm"/>
+                <constraint firstItem="Hxk-dh-vdu" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="140" id="OiI-0y-lCf"/>
+                <constraint firstItem="Hxk-dh-vdu" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="V0M-Jb-2NJ"/>
+                <constraint firstItem="QtY-pq-BUh" firstAttribute="top" secondItem="hpG-Rr-Gzp" secondAttribute="bottom" constant="27" id="p56-Ax-xtL"/>
+                <constraint firstItem="QtY-pq-BUh" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="y6c-CW-g8V"/>
+            </constraints>
+            <point key="canvasLocation" x="33.5" y="54.5"/>
+        </view>
+    </objects>
+</document>
